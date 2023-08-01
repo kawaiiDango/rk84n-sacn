@@ -1,0 +1,66 @@
+{'interface_number': 0,
+ 'manufacturer_string': 'SINO WEALTH',
+ 'path': b'\\\\?\\HID#VID_258A&PID_00C8&MI_00#8&17620e&0&0000#{4d1e55b2-f16f-1'
+         b'1cf-88cb-001111000030}\\KBD',
+ 'product_id': 200,
+ 'product_string': 'RK Bluetooth Keyboard',
+ 'release_number': 4112,
+ 'serial_number': '',
+ 'usage': 6,
+ 'usage_page': 1,
+ 'vendor_id': 9610}
+{'interface_number': 1,
+ 'manufacturer_string': 'SINO WEALTH',
+ 'path': b'\\\\?\\HID#VID_258A&PID_00C8&MI_01&Col01#8&23bfdbb4&0&0000#{4d1e55b'
+         b'2-f16f-11cf-88cb-001111000030}',
+ 'product_id': 200,
+ 'product_string': 'RK Bluetooth Keyboard',
+ 'release_number': 4112,
+ 'serial_number': '',
+ 'usage': 128,
+ 'usage_page': 1,
+ 'vendor_id': 9610}
+{'interface_number': 1,
+ 'manufacturer_string': 'SINO WEALTH',
+ 'path': b'\\\\?\\HID#VID_258A&PID_00C8&MI_01&Col02#8&23bfdbb4&0&0001#{4d1e55b'
+         b'2-f16f-11cf-88cb-001111000030}',
+ 'product_id': 200,
+ 'product_string': 'RK Bluetooth Keyboard',
+ 'release_number': 4112,
+ 'serial_number': '',
+ 'usage': 1,
+ 'usage_page': 12,
+ 'vendor_id': 9610}
+{'interface_number': 1,
+ 'manufacturer_string': 'SINO WEALTH',
+ 'path': b'\\\\?\\HID#VID_258A&PID_00C8&MI_01&Col03#8&23bfdbb4&0&0002#{4d1e55b'
+         b'2-f16f-11cf-88cb-001111000030}',
+ 'product_id': 200,
+ 'product_string': 'RK Bluetooth Keyboard',
+ 'release_number': 4112,
+ 'serial_number': '',
+ 'usage': 1,
+ 'usage_page': 65280,
+ 'vendor_id': 9610}
+{'interface_number': 1,
+ 'manufacturer_string': 'SINO WEALTH',
+ 'path': b'\\\\?\\HID#VID_258A&PID_00C8&MI_01&Col05#8&23bfdbb4&0&0004#{4d1e55b'
+         b'2-f16f-11cf-88cb-001111000030}',
+ 'product_id': 200,
+ 'product_string': 'RK Bluetooth Keyboard',
+ 'release_number': 4112,
+ 'serial_number': '',
+ 'usage': 1,
+ 'usage_page': 65280,
+ 'vendor_id': 9610}
+{'interface_number': 1,
+ 'manufacturer_string': 'SINO WEALTH',
+ 'path': b'\\\\?\\HID#VID_258A&PID_00C8&MI_01&Col04#8&23bfdbb4&0&0003#{4d1e55b'
+         b'2-f16f-11cf-88cb-001111000030}\\KBD',
+ 'product_id': 200,
+ 'product_string': 'RK Bluetooth Keyboard',
+ 'release_number': 4112,
+ 'serial_number': '',
+ 'usage': 6,
+ 'usage_page': 1,
+ 'vendor_id': 9610}
