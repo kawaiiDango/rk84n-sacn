@@ -17,9 +17,12 @@ rk84 = hid.enumerate(RK84_VID, RK84_PID)
 h = hid.device()
 packets_queue = queue.Queue()
 packet_sender_stop_event = threading.Event()
+last_packets: list[bytes] = []
 
-@receiver.listen_on('universe', universe=1)  # listens on universe 1
+@receiver.listen_on('universe', universe=1)
 def sacn_callback(packet: sacn.DataPacket):
+    global last_packets
+    
     dmx_data = packet.dmxData
     colors = []
 
@@ -33,11 +36,21 @@ def sacn_callback(packet: sacn.DataPacket):
     for packet in packets:
         packets_queue.put(packet)
 
+    last_packets = packets
+
 def usb_packet_sender():
     while True:
-        packet = packets_queue.get(block=True)
-        # print(packet.hex(" "))
-        h.send_feature_report(packet)
+        try:
+            packet = packets_queue.get(block=True, timeout=1)
+            # print(packet.hex(" "))
+            h.send_feature_report(packet)
+        except queue.Empty:
+            if packet_sender_stop_event.is_set():
+                break
+            else:
+                # resend last packets
+                for packet in last_packets:
+                    h.send_feature_report(packet)
 
 if __name__ == "__main__":
     rk_path = None
@@ -71,8 +84,4 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("Exiting...")
         receiver.stop()
-        exit(0)
-
-    
-    # time.sleep(1)
-    # receiver.stop()
+        packet_sender_stop_event.set()
