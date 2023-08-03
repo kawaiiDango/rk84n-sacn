@@ -39,7 +39,7 @@ def sacn_callback(packet: sacn.DataPacket):
     last_packets = packets
 
 def usb_packet_sender():
-    while True:
+    while not packet_sender_stop_event.is_set():
         try:
             packet = packets_queue.get(block=True, timeout=1)
             # print(packet.hex(" "))

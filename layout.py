@@ -250,6 +250,15 @@ def colors_dict_to_usb_packets(colors: dict[Keys, tuple[int]]) -> list[bytes]:
     buffer[3] = 0x06
     buffer[4] = 0x00
 
+    # save per key lighting
+    # buffer[0] = 0x0a
+    # buffer[1] = 0x07
+    # buffer[2] = 0x01
+
+    # buffer[3] = 0x03
+    # buffer[4] = 0x7e
+    # buffer[5] = 0x01
+
     buffer[65*1] = 0x0a
     buffer[65*1+1] = 0x07
     buffer[65*1+2] = 0x02
